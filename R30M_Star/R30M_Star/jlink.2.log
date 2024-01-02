@@ -1,0 +1,623 @@
+TCCCC 36359:651.268   SEGGER J-Link V7.88a Log File
+TCCCC 36359:651.865   DLL Compiled: May  3 2023 14:32:24
+TCCCC 36359:651.885   Logging started @ 2023-12-27 03:48
+TCCCC 36359:651.903 - 66.292ms
+TCCCC 36359:651.928 JLINK_ExecCommand("device = ATSAMR30E18A", ...). 
+TCCCC 36359:652.066   Device "ATSAMR30E18A" selected.
+TCCCC 36359:653.472 - 1.543ms returns 0x00
+TCCCC 36359:653.506 JLINK_GetHWStatus(...)
+TCCCC 36359:653.967 - 0.500ms returns 0
+TCCCC 36359:654.021 JLINK_ClrRESET()
+TCCCC 36359:654.736 - 0.732ms
+TCCCC 36359:659.706 JLINK_SetRESET()
+TCCCC 36359:659.982 - 0.308ms
+TCCCC 36359:665.710 JLINK_ClrRESET()
+TCCCC 36359:666.424 - 0.747ms
+TCCCC 36359:671.808 JLINK_ClrTCK()
+TCCCC 36359:672.146 - 0.368ms returns 0
+TCCCC 36359:679.712 JLINK_SetRESET()
+TCCCC 36359:680.021 - 0.315ms
+TCCCC 36359:685.702 JLINK_Clock()
+TCCCC 36359:686.185 - 0.491ms returns 0
+TCCCC 36359:691.707 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+TCCCC 36359:692.897 - 1.199ms returns 0x00
+TCCCC 36359:692.914 JLINK_SetSpeed(50)
+TCCCC 36359:693.078 - 0.171ms
+TCCCC 36359:693.092 JLINK_CORESIGHT_Configure()
+TCCCC 36359:702.823 - 9.739ms returns 0
+TCCCC 36359:702.858 JLINK_CORESIGHT_WriteAPDPReg(DP reg 0x02, 0x00000000)
+TCCCC 36359:704.832 - 1.985ms returns 0
+TCCCC 36359:704.850 JLINK_CORESIGHT_WriteAPDPReg(AP reg 0x00, 0x23000040)
+TCCCC 36359:706.717 - 1.879ms returns 0
+TCCCC 36359:706.736 JLINK_CORESIGHT_WriteAPDPReg(AP reg 0x01, 0x41002101)
+TCCCC 36359:711.466 - 4.738ms returns 0
+TCCCC 36359:711.482 JLINK_CORESIGHT_ReadAPDPReg(AP reg 0x03)
+TCCCC 36359:719.434   Value=0x00000000
+TCCCC 36359:719.456 - 7.977ms returns 0
+TCCCC 36359:719.545 JLINK_Halt()
+TCCCC 36359:719.859   InitTarget() start
+TCCCC 36359:719.874    J-Link Script File: Executing InitTarget()
+TCCCC 36359:719.888   InitTarget()
+TCCCC 36359:765.169   InitTarget() end - Took 45.2ms
+TCCCC 36359:771.487   Found SW-DP with ID 0x0BC11477
+TCCCC 36359:790.064   Old FW that does not support reading DPIDR via DAP jobs
+TCCCC 36359:807.531   DPv0 detected
+TCCCC 36359:807.562   CoreSight SoC-400 or earlier
+TCCCC 36359:807.579   Scanning AP map to find all available APs
+TCCCC 36359:818.601   AP[1]: Stopped AP scan as end of AP map has been reached
+TCCCC 36359:818.633   AP[0]: AHB-AP (IDR: 0x04770031)
+TCCCC 36359:818.651   Iterating through AP map to find AHB-AP to use
+TCCCC 36359:837.249   AP[0]: Core found
+TCCCC 36359:837.279   AP[0]: AHB-AP ROM base: 0x41003000
+TCCCC 36359:846.396   CPUID register: 0x410CC601. Implementer code: 0x41 (ARM)
+TCCCC 36359:846.439   Found Cortex-M0 r0p1, Little endian.
+TCCCC 36359:847.171   -- Max. mem block: 0x000023B8
+TCCCC 36359:848.835   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+TCCCC 36359:854.937   CPU_ReadMem(4 bytes @ 0xE0002000)
+TCCCC 36359:861.132   FPUnit: 4 code (BP) slots and 0 literal slots
+TCCCC 36359:861.165   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+TCCCC 36359:867.341   CPU_ReadMem(4 bytes @ 0xE0001000)
+TCCCC 36359:873.444   CPU_WriteMem(4 bytes @ 0xE0001000)
+TCCCC 36359:879.704   CoreSight components:
+TCCCC 36359:879.726   ROMTbl[0] @ 41003000
+TCCCC 36359:879.738   CPU_ReadMem(64 bytes @ 0x41003000)
+TCCCC 36359:900.083   CPU_ReadMem(32 bytes @ 0xE00FFFE0)
+TCCCC 36359:912.816   [0][0]: E00FF000 CID B105100D PID 000BB4C0 ROM Table
+TCCCC 36359:912.842   ROMTbl[1] @ E00FF000
+TCCCC 36359:912.853   CPU_ReadMem(64 bytes @ 0xE00FF000)
+TCCCC 36359:933.165   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+TCCCC 36359:945.893   [1][0]: E000E000 CID B105E00D PID 000BB008 SCS
+TCCCC 36359:945.916   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+TCCCC 36359:958.609   [1][1]: E0001000 CID B105E00D PID 000BB00A DWT
+TCCCC 36359:958.635   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+TCCCC 36359:971.301   [1][2]: E0002000 CID B105E00D PID 000BB00B FPB
+TCCCC 36359:971.320   CPU_ReadMem(32 bytes @ 0x41006FE0)
+TCCCC 36359:984.217   [0][1]: 41006000 CID B105900D PID 001BB932 MTB-M0+
+TCCCC 36360:050.199 - 330.686ms returns 0x00
+TCCCC 36360:050.245 JLINK_EraseChip()
+TCCCC 36360:050.595   Old firmware which does not support pausing periodic actions during flash download
+TCCCC 36360:050.942   CPU_ReadMem(4 bytes @ 0x41006004)
+TCCCC 36360:057.158   CPU_ReadMem(4 bytes @ 0xE000ED90)
+TCCCC 36360:063.262    -- --------------------------------------
+TCCCC 36360:063.284    -- Start of determining dirty areas
+TCCCC 36360:063.353    -- End of determining dirty areas
+TCCCC 36360:063.365    -- Start of preparing flash programming
+TCCCC 36360:063.377    -- Calculating RAM usage
+TCCCC 36360:063.394    -- RAM usage = 10052 Bytes
+TCCCC 36360:063.405    -- Preserving CPU registers
+TCCCC 36360:063.426    -- Preparing target
+TCCCC 36360:063.437    -- Preserving target RAM temporarily used for programming
+TCCCC 36362:469.880    -- Downloading RAMCode
+TCCCC 36363:191.949    -- Preparing RAMCode
+TCCCC 36363:352.367    -- End of preparing flash programming
+TCCCC 36363:352.524   Looking for J-Link GUI Server exe at: C:\Program Files (x86)\Atmel\Studio\7.0\atbackend\JLinkGUIServer.exe
+TCCCC 36363:352.604   Looking for J-Link GUI Server exe at: \JLinkGUIServer.exe
+TCCCC 36363:653.711   Failed to connect to J-Link GUI Server.
+TCCCC 36363:659.320    -- CPU speed could not be measured.
+TCCCC 36363:659.359    -- Start of erasing sectors
+TCCCC 36363:659.373    -- Erasing range 0x00000000 - 0x0001FFFF (512 Sectors, 128 KB)
+TCCCC 36364:162.867    -- Erasing range 0x00020000 - 0x0003FFFF (512 Sectors, 128 KB)
+TCCCC 36364:686.835    -- End of erasing sectors
+TCCCC 36364:686.864    -- Start of restoring
+TCCCC 36364:686.875    -- Restoring RAMCode
+TCCCC 36364:778.081    -- Restoring target memory
+TCCCC 36367:190.809    -- Restore target
+TCCCC 36367:190.843    -- Restoring CPU registers
+TCCCC 36367:190.885    -- End of restoring
+TCCCC 36367:190.970    -- Total time needed: 7.127s (Prepare: 3.595s, Compare: 0.000s, Erase: 1.027s, Program: 0.000s, Verify: 0.000s, Restore: 2.504s)
+TCCCC 36367:193.881    -- --------------------------------------
+TCCCC 36367:193.907    -- Start of determining dirty areas
+TCCCC 36367:193.922    -- End of determining dirty areas
+TCCCC 36367:193.933    -- Start of preparing flash programming
+TCCCC 36367:193.943    -- Calculating RAM usage
+TCCCC 36367:193.971    -- RAM usage = 2676 Bytes
+TCCCC 36367:193.982    -- Preserving CPU registers
+TCCCC 36367:194.003    -- Preparing target
+TCCCC 36367:194.014    -- Preserving target RAM temporarily used for programming
+TCCCC 36367:838.222    -- Downloading RAMCode
+TCCCC 36368:464.182    -- Preparing RAMCode
+TCCCC 36368:648.308    -- End of preparing flash programming
+TCCCC 36368:653.576    -- CPU speed could not be measured.
+TCCCC 36368:653.612    -- Start of erasing sectors
+TCCCC 36368:653.625    -- Erasing range 0x00400000 - 0x00401FFF ( 32 Sectors, 8 KB)
+TCCCC 36368:706.027    -- End of erasing sectors
+TCCCC 36368:706.059    -- Start of restoring
+TCCCC 36368:706.085    -- Restoring RAMCode
+TCCCC 36368:797.719    -- Restoring target memory
+TCCCC 36369:446.370    -- Restore target
+TCCCC 36369:446.410    -- Restoring CPU registers
+TCCCC 36369:446.432    -- End of restoring
+TCCCC 36369:446.485    -- Total time needed: 2.252s (Prepare: 1.459s, Compare: 0.000s, Erase: 0.052s, Program: 0.000s, Verify: 0.000s, Restore: 0.740s)
+TCCCC 36369:449.032    -- --------------------------------------
+TCCCC 36369:449.051    -- Start of determining dirty areas
+TCCCC 36369:449.063    -- End of determining dirty areas
+TCCCC 36369:449.073    -- Start of preparing flash programming
+TCCCC 36369:449.084    -- Calculating RAM usage
+TCCCC 36369:449.100    -- RAM usage = 2852 Bytes
+TCCCC 36369:449.111    -- Preserving CPU registers
+TCCCC 36369:449.130    -- Preparing target
+TCCCC 36369:449.143    -- Preserving target RAM temporarily used for programming
+TCCCC 36370:134.929    -- Downloading RAMCode
+TCCCC 36370:800.940    -- Preparing RAMCode
+TCCCC 36370:985.202    -- End of preparing flash programming
+TCCCC 36370:991.415    -- CPU speed could not be measured.
+TCCCC 36370:991.445    -- Start of erasing sectors
+TCCCC 36370:991.458    -- Erasing range 0x00804000 - 0x008040FF (  1 Sector, 256 Bytes)
+TCCCC 36371:016.976    -- End of erasing sectors
+TCCCC 36371:017.083    -- Start of restoring
+TCCCC 36371:017.093    -- Restoring RAMCode
+TCCCC 36371:108.607    -- Restoring target memory
+TCCCC 36371:798.766    -- Restore target
+TCCCC 36371:798.797    -- Restoring CPU registers
+TCCCC 36371:798.819    -- End of restoring
+TCCCC 36371:798.877    -- Total time needed: 2.349s (Prepare: 1.542s, Compare: 0.000s, Erase: 0.025s, Program: 0.000s, Verify: 0.000s, Restore: 0.781s)
+TCCCC 36371:802.227 - 11751.998ms returns 0
+TCCCC 36371:806.172 JLINK_ExecCommand("Device = ATSAMR30E18A", ...). 
+TCCCC 36371:806.324   Device "ATSAMR30E18A" selected.
+TCCCC 36371:808.702 - 2.524ms returns 0x00
+TCCCC 36371:808.720 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+TCCCC 36371:808.727 - 0.010ms returns 0x00
+TCCCC 36371:808.735 JLINK_SetSpeed(4000)
+TCCCC 36371:808.900 - 0.176ms
+TCCCC 36371:808.919 JLINK_ResetPullsRESET(OFF)
+TCCCC 36371:808.926 - 0.010ms
+TCCCC 36371:808.934 JLINK_Connect()
+TCCCC 36371:809.441   InitTarget() start
+TCCCC 36371:809.459    J-Link Script File: Executing InitTarget()
+TCCCC 36371:809.473   InitTarget()
+TCCCC 36371:818.500   InitTarget() end - Took 9.02ms
+TCCCC 36371:819.634   Found SW-DP with ID 0x0BC11477
+TCCCC 36371:826.285   Old FW that does not support reading DPIDR via DAP jobs
+TCCCC 36371:833.424   DPv0 detected
+TCCCC 36371:833.449   CoreSight SoC-400 or earlier
+TCCCC 36371:833.466   AP map detection skipped. Manually configured AP map found.
+TCCCC 36371:833.495   AP[0]: AHB-AP (IDR: Not set)
+TCCCC 36371:841.297   AP[0]: Core found
+TCCCC 36371:841.321   AP[0]: AHB-AP ROM base: 0x41003000
+TCCCC 36371:845.374   CPUID register: 0x410CC601. Implementer code: 0x41 (ARM)
+TCCCC 36371:845.398   Found Cortex-M0 r0p1, Little endian.
+TCCCC 36371:845.672   -- Max. mem block: 0x00002330
+TCCCC 36371:845.692   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+TCCCC 36371:846.297   CPU_ReadMem(4 bytes @ 0xE0002000)
+TCCCC 36371:846.839   FPUnit: 4 code (BP) slots and 0 literal slots
+TCCCC 36371:846.855   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+TCCCC 36371:847.457   CPU_ReadMem(4 bytes @ 0xE0001000)
+TCCCC 36371:847.937   CoreSight components:
+TCCCC 36371:847.961   ROMTbl[0] @ 41003000
+TCCCC 36371:847.975   CPU_ReadMem(64 bytes @ 0x41003000)
+TCCCC 36371:849.054   CPU_ReadMem(32 bytes @ 0xE00FFFE0)
+TCCCC 36371:849.889   [0][0]: E00FF000 CID B105100D PID 000BB4C0 ROM Table
+TCCCC 36371:849.925   ROMTbl[1] @ E00FF000
+TCCCC 36371:849.936   CPU_ReadMem(64 bytes @ 0xE00FF000)
+TCCCC 36371:851.006   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+TCCCC 36371:851.830   [1][0]: E000E000 CID B105E00D PID 000BB008 SCS
+TCCCC 36371:851.848   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+TCCCC 36371:852.652   [1][1]: E0001000 CID B105E00D PID 000BB00A DWT
+TCCCC 36371:852.669   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+TCCCC 36371:853.448   [1][2]: E0002000 CID B105E00D PID 000BB00B FPB
+TCCCC 36371:853.469   CPU_ReadMem(32 bytes @ 0x41006FE0)
+TCCCC 36371:854.291   [0][1]: 41006000 CID B105900D PID 001BB932 MTB-M0+
+TCCCC 36371:854.318 - 45.403ms returns 0x00
+TCCCC 36371:854.434 JLINK_Halt()
+TCCCC 36371:855.002 - 0.581ms returns 0x00
+TCCCC 36371:855.971 JLINK_JTAG_GetDeviceID(DeviceIndex = 0)
+TCCCC 36371:855.991 - 0.023ms returns 0
+TCCCC 36371:856.000 JLINK_ReadMemU32(0x41002018, 0x1 Items)
+TCCCC 36371:856.250   CPU_ReadMem(4 bytes @ 0x41002018)
+TCCCC 36371:856.804   Data:  1F 02 81 10
+TCCCC 36371:856.820 - 0.823ms returns 1 (0x1)
+T7C60 36371:875.551 JLINK_IsHalted()
+T7C60 36371:875.631 - 0.086ms returns TRUE
+T7C60 36371:875.647 JLINK_GetMOEs(...)
+T7C60 36371:875.666   CPU_ReadMem(4 bytes @ 0xE000ED30)
+T7C60 36371:876.221 - 0.595ms returns 0x01
+T7C60 36371:876.253 JLINK_ReadReg(R15 (PC))
+T7C60 36371:876.268 - 0.020ms returns 0x00008360
+TCCCC 36371:898.454 JLINK_BeginDownload(Flags = 0x00000000)
+TCCCC 36371:898.492 - 0.042ms
+TCCCC 36371:898.507 JLINK_WriteMem(0x00000000, 0x11AA0 Bytes, ...)
+TCCCC 36371:898.516   Data:  B0 42 00 20 61 83 00 00 5D 83 00 00 5D 83 00 00 ...
+TCCCC 36371:898.796   completely In flash
+TCCCC 36371:898.816 - 0.312ms returns 0x11AA0
+TCCCC 36371:899.037 JLINK_WriteMem(0x00011AA0, 0x98 Bytes, ...)
+TCCCC 36371:899.056   Data:  40 1F 00 00 08 00 00 00 01 FF FF 03 81 FF 00 00 ...
+TCCCC 36371:899.069   completely In flash
+TCCCC 36371:899.079 - 0.045ms returns 0x98
+T7C60 36372:078.547 JLINK_IsHalted()
+T7C60 36372:078.590 - 0.047ms returns TRUE
+TCCCC 36372:079.282 JLINK_EndDownload()
+TCCCC 36372:079.711   Old firmware which does not support pausing periodic actions during flash download
+TCCCC 36372:079.738   CPU_ReadMem(4 bytes @ 0x41006004)
+TCCCC 36372:080.580   CPU_ReadMem(4 bytes @ 0xE000ED90)
+TCCCC 36372:081.135    -- --------------------------------------
+TCCCC 36372:081.151   Flash bank @ 0x00000000: Default: L2 verify disabled because algorithm performs L1 verify
+TCCCC 36372:081.161    -- Start of determining dirty areas in flash cache
+TCCCC 36372:081.172    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000000 if necessary
+TCCCC 36372:081.194    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000100 if necessary
+TCCCC 36372:081.220    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000200 if necessary
+TCCCC 36372:081.230    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000300 if necessary
+TCCCC 36372:081.240    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000400 if necessary
+TCCCC 36372:081.250    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000500 if necessary
+TCCCC 36372:081.260    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000600 if necessary
+TCCCC 36372:081.270    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000700 if necessary
+TCCCC 36372:081.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000800 if necessary
+TCCCC 36372:081.290    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000900 if necessary
+TCCCC 36372:081.300    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000A00 if necessary
+TCCCC 36372:081.310    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000B00 if necessary
+TCCCC 36372:081.320    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000C00 if necessary
+TCCCC 36372:081.330    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000D00 if necessary
+TCCCC 36372:081.340    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000E00 if necessary
+TCCCC 36372:081.350    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00000F00 if necessary
+TCCCC 36372:081.361    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001000 if necessary
+TCCCC 36372:081.372    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001100 if necessary
+TCCCC 36372:081.381    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001200 if necessary
+TCCCC 36372:081.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001300 if necessary
+TCCCC 36372:081.402    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001400 if necessary
+TCCCC 36372:081.412    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001500 if necessary
+TCCCC 36372:081.422    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001600 if necessary
+TCCCC 36372:081.432    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001700 if necessary
+TCCCC 36372:081.442    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001800 if necessary
+TCCCC 36372:081.452    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001900 if necessary
+TCCCC 36372:081.462    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001A00 if necessary
+TCCCC 36372:081.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001B00 if necessary
+TCCCC 36372:081.532    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001C00 if necessary
+TCCCC 36372:081.542    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001D00 if necessary
+TCCCC 36372:081.552    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001E00 if necessary
+TCCCC 36372:081.562    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00001F00 if necessary
+TCCCC 36372:081.572    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002000 if necessary
+TCCCC 36372:081.582    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002100 if necessary
+TCCCC 36372:081.592    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002200 if necessary
+TCCCC 36372:081.602    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002300 if necessary
+TCCCC 36372:081.615    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002400 if necessary
+TCCCC 36372:081.626    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002500 if necessary
+TCCCC 36372:081.637    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002600 if necessary
+TCCCC 36372:081.648    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002700 if necessary
+TCCCC 36372:081.659    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002800 if necessary
+TCCCC 36372:081.670    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002900 if necessary
+TCCCC 36372:081.681    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002A00 if necessary
+TCCCC 36372:081.691    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002B00 if necessary
+TCCCC 36372:081.702    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002C00 if necessary
+TCCCC 36372:081.713    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002D00 if necessary
+TCCCC 36372:081.724    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002E00 if necessary
+TCCCC 36372:081.735    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00002F00 if necessary
+TCCCC 36372:081.746    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003000 if necessary
+TCCCC 36372:081.756    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003100 if necessary
+TCCCC 36372:081.770    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003200 if necessary
+TCCCC 36372:081.781    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003300 if necessary
+TCCCC 36372:081.794    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003400 if necessary
+TCCCC 36372:081.806    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003500 if necessary
+TCCCC 36372:081.817    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003600 if necessary
+TCCCC 36372:081.829    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003700 if necessary
+TCCCC 36372:081.840    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003800 if necessary
+TCCCC 36372:081.855    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003900 if necessary
+TCCCC 36372:081.871    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003A00 if necessary
+TCCCC 36372:081.895    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003B00 if necessary
+TCCCC 36372:081.910    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003C00 if necessary
+TCCCC 36372:081.934    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003D00 if necessary
+TCCCC 36372:081.948    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003E00 if necessary
+TCCCC 36372:081.977    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00003F00 if necessary
+TCCCC 36372:081.991    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004000 if necessary
+TCCCC 36372:082.003    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004100 if necessary
+TCCCC 36372:082.023    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004200 if necessary
+TCCCC 36372:082.035    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004300 if necessary
+TCCCC 36372:082.047    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004400 if necessary
+TCCCC 36372:082.059    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004500 if necessary
+TCCCC 36372:082.071    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004600 if necessary
+TCCCC 36372:082.082    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004700 if necessary
+TCCCC 36372:082.094    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004800 if necessary
+TCCCC 36372:082.105    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004900 if necessary
+TCCCC 36372:082.117    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004A00 if necessary
+TCCCC 36372:082.128    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004B00 if necessary
+TCCCC 36372:082.140    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004C00 if necessary
+TCCCC 36372:082.151    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004D00 if necessary
+TCCCC 36372:082.165    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004E00 if necessary
+TCCCC 36372:082.177    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00004F00 if necessary
+TCCCC 36372:082.190    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005000 if necessary
+TCCCC 36372:082.201    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005100 if necessary
+TCCCC 36372:082.212    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005200 if necessary
+TCCCC 36372:082.224    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005300 if necessary
+TCCCC 36372:082.235    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005400 if necessary
+TCCCC 36372:082.246    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005500 if necessary
+TCCCC 36372:082.257    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005600 if necessary
+TCCCC 36372:082.269    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005700 if necessary
+TCCCC 36372:082.280    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005800 if necessary
+TCCCC 36372:082.292    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005900 if necessary
+TCCCC 36372:082.303    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005A00 if necessary
+TCCCC 36372:082.315    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005B00 if necessary
+TCCCC 36372:082.326    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005C00 if necessary
+TCCCC 36372:082.337    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005D00 if necessary
+TCCCC 36372:082.349    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005E00 if necessary
+TCCCC 36372:082.360    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00005F00 if necessary
+TCCCC 36372:082.371    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006000 if necessary
+TCCCC 36372:082.382    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006100 if necessary
+TCCCC 36372:082.395    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006200 if necessary
+TCCCC 36372:082.406    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006300 if necessary
+TCCCC 36372:082.418    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006400 if necessary
+TCCCC 36372:082.429    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006500 if necessary
+TCCCC 36372:082.440    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006600 if necessary
+TCCCC 36372:082.451    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006700 if necessary
+TCCCC 36372:082.463    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006800 if necessary
+TCCCC 36372:082.474    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006900 if necessary
+TCCCC 36372:082.485    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006A00 if necessary
+TCCCC 36372:082.496    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006B00 if necessary
+TCCCC 36372:082.507    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006C00 if necessary
+TCCCC 36372:082.519    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006D00 if necessary
+TCCCC 36372:082.530    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006E00 if necessary
+TCCCC 36372:082.542    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00006F00 if necessary
+TCCCC 36372:082.553    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007000 if necessary
+TCCCC 36372:082.565    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007100 if necessary
+TCCCC 36372:082.576    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007200 if necessary
+TCCCC 36372:082.587    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007300 if necessary
+TCCCC 36372:082.598    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007400 if necessary
+TCCCC 36372:082.610    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007500 if necessary
+TCCCC 36372:082.622    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007600 if necessary
+TCCCC 36372:082.634    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007700 if necessary
+TCCCC 36372:082.647    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007800 if necessary
+TCCCC 36372:082.660    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007900 if necessary
+TCCCC 36372:082.673    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007A00 if necessary
+TCCCC 36372:082.685    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007B00 if necessary
+TCCCC 36372:082.697    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007C00 if necessary
+TCCCC 36372:082.709    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007D00 if necessary
+TCCCC 36372:082.721    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007E00 if necessary
+TCCCC 36372:082.734    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00007F00 if necessary
+TCCCC 36372:082.746    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008000 if necessary
+TCCCC 36372:082.758    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008100 if necessary
+TCCCC 36372:082.770    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008200 if necessary
+TCCCC 36372:082.781    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008300 if necessary
+TCCCC 36372:082.794    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008400 if necessary
+TCCCC 36372:082.805    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008500 if necessary
+TCCCC 36372:082.816    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008600 if necessary
+TCCCC 36372:082.827    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008700 if necessary
+TCCCC 36372:082.839    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008800 if necessary
+TCCCC 36372:082.850    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008900 if necessary
+TCCCC 36372:082.863    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008A00 if necessary
+TCCCC 36372:082.874    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008B00 if necessary
+TCCCC 36372:082.885    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008C00 if necessary
+TCCCC 36372:082.903    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008D00 if necessary
+TCCCC 36372:082.934    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008E00 if necessary
+TCCCC 36372:082.955    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00008F00 if necessary
+TCCCC 36372:082.973    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009000 if necessary
+TCCCC 36372:082.990    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009100 if necessary
+TCCCC 36372:083.004    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009200 if necessary
+TCCCC 36372:083.034    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009300 if necessary
+TCCCC 36372:083.046    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009400 if necessary
+TCCCC 36372:083.078    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009500 if necessary
+TCCCC 36372:083.090    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009600 if necessary
+TCCCC 36372:083.102    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009700 if necessary
+TCCCC 36372:083.114    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009800 if necessary
+TCCCC 36372:083.126    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009900 if necessary
+TCCCC 36372:083.138    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009A00 if necessary
+TCCCC 36372:083.151    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009B00 if necessary
+TCCCC 36372:083.164    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009C00 if necessary
+TCCCC 36372:083.177    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009D00 if necessary
+TCCCC 36372:083.190    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009E00 if necessary
+TCCCC 36372:083.203    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00009F00 if necessary
+TCCCC 36372:083.217    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A000 if necessary
+TCCCC 36372:083.231    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A100 if necessary
+TCCCC 36372:083.245    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A200 if necessary
+TCCCC 36372:083.258    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A300 if necessary
+TCCCC 36372:083.271    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A400 if necessary
+TCCCC 36372:083.285    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A500 if necessary
+TCCCC 36372:083.307    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A600 if necessary
+TCCCC 36372:083.379    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A700 if necessary
+TCCCC 36372:083.392    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A800 if necessary
+TCCCC 36372:083.411    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000A900 if necessary
+TCCCC 36372:083.423    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000AA00 if necessary
+TCCCC 36372:083.435    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000AB00 if necessary
+TCCCC 36372:083.447    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000AC00 if necessary
+TCCCC 36372:083.459    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000AD00 if necessary
+TCCCC 36372:083.472    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000AE00 if necessary
+TCCCC 36372:083.500    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000AF00 if necessary
+TCCCC 36372:083.512    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B000 if necessary
+TCCCC 36372:083.524    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B100 if necessary
+TCCCC 36372:083.536    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B200 if necessary
+TCCCC 36372:083.549    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B300 if necessary
+TCCCC 36372:083.571    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B400 if necessary
+TCCCC 36372:083.583    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B500 if necessary
+TCCCC 36372:083.595    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B600 if necessary
+TCCCC 36372:083.625    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B700 if necessary
+TCCCC 36372:083.637    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B800 if necessary
+TCCCC 36372:083.649    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000B900 if necessary
+TCCCC 36372:083.661    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000BA00 if necessary
+TCCCC 36372:083.674    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000BB00 if necessary
+TCCCC 36372:083.686    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000BC00 if necessary
+TCCCC 36372:083.698    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000BD00 if necessary
+TCCCC 36372:083.718    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000BE00 if necessary
+TCCCC 36372:083.748    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000BF00 if necessary
+TCCCC 36372:083.761    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C000 if necessary
+TCCCC 36372:083.773    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C100 if necessary
+TCCCC 36372:083.785    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C200 if necessary
+TCCCC 36372:083.797    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C300 if necessary
+TCCCC 36372:083.809    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C400 if necessary
+TCCCC 36372:083.820    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C500 if necessary
+TCCCC 36372:083.832    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C600 if necessary
+TCCCC 36372:083.844    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C700 if necessary
+TCCCC 36372:083.857    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C800 if necessary
+TCCCC 36372:083.868    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000C900 if necessary
+TCCCC 36372:083.881    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000CA00 if necessary
+TCCCC 36372:083.893    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000CB00 if necessary
+TCCCC 36372:083.905    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000CC00 if necessary
+TCCCC 36372:083.917    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000CD00 if necessary
+TCCCC 36372:083.929    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000CE00 if necessary
+TCCCC 36372:083.940    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000CF00 if necessary
+TCCCC 36372:083.953    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D000 if necessary
+TCCCC 36372:083.965    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D100 if necessary
+TCCCC 36372:083.977    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D200 if necessary
+TCCCC 36372:083.988    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D300 if necessary
+TCCCC 36372:084.000    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D400 if necessary
+TCCCC 36372:084.012    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D500 if necessary
+TCCCC 36372:084.023    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D600 if necessary
+TCCCC 36372:084.035    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D700 if necessary
+TCCCC 36372:084.046    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D800 if necessary
+TCCCC 36372:084.058    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000D900 if necessary
+TCCCC 36372:084.070    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000DA00 if necessary
+TCCCC 36372:084.081    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000DB00 if necessary
+TCCCC 36372:084.093    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000DC00 if necessary
+TCCCC 36372:084.105    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000DD00 if necessary
+TCCCC 36372:084.117    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000DE00 if necessary
+TCCCC 36372:084.128    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000DF00 if necessary
+TCCCC 36372:084.140    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E000 if necessary
+TCCCC 36372:084.152    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E100 if necessary
+TCCCC 36372:084.163    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E200 if necessary
+TCCCC 36372:084.175    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E300 if necessary
+TCCCC 36372:084.194    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E400 if necessary
+TCCCC 36372:084.206    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E500 if necessary
+TCCCC 36372:084.218    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E600 if necessary
+TCCCC 36372:084.231    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E700 if necessary
+TCCCC 36372:084.242    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E800 if necessary
+TCCCC 36372:084.254    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000E900 if necessary
+TCCCC 36372:084.269    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000EA00 if necessary
+TCCCC 36372:084.281    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000EB00 if necessary
+TCCCC 36372:084.293    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000EC00 if necessary
+TCCCC 36372:084.306    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000ED00 if necessary
+TCCCC 36372:084.317    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000EE00 if necessary
+TCCCC 36372:084.329    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000EF00 if necessary
+TCCCC 36372:084.341    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F000 if necessary
+TCCCC 36372:084.352    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F100 if necessary
+TCCCC 36372:084.364    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F200 if necessary
+TCCCC 36372:084.376    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F300 if necessary
+TCCCC 36372:084.387    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F400 if necessary
+TCCCC 36372:084.399    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F500 if necessary
+TCCCC 36372:084.410    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F600 if necessary
+TCCCC 36372:084.422    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F700 if necessary
+TCCCC 36372:084.434    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F800 if necessary
+TCCCC 36372:084.445    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000F900 if necessary
+TCCCC 36372:084.457    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000FA00 if necessary
+TCCCC 36372:084.468    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000FB00 if necessary
+TCCCC 36372:084.480    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000FC00 if necessary
+TCCCC 36372:084.492    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000FD00 if necessary
+TCCCC 36372:084.504    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000FE00 if necessary
+TCCCC 36372:084.515    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x0000FF00 if necessary
+TCCCC 36372:084.527    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010000 if necessary
+TCCCC 36372:084.540    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010100 if necessary
+TCCCC 36372:084.551    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010200 if necessary
+TCCCC 36372:084.563    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010300 if necessary
+TCCCC 36372:084.575    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010400 if necessary
+TCCCC 36372:084.587    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010500 if necessary
+TCCCC 36372:084.598    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010600 if necessary
+TCCCC 36372:084.610    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010700 if necessary
+TCCCC 36372:084.621    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010800 if necessary
+TCCCC 36372:084.633    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010900 if necessary
+TCCCC 36372:084.644    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010A00 if necessary
+TCCCC 36372:084.656    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010B00 if necessary
+TCCCC 36372:084.667    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010C00 if necessary
+TCCCC 36372:084.679    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010D00 if necessary
+TCCCC 36372:084.691    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010E00 if necessary
+TCCCC 36372:084.703    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00010F00 if necessary
+TCCCC 36372:084.715    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011000 if necessary
+TCCCC 36372:084.727    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011100 if necessary
+TCCCC 36372:084.743    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011200 if necessary
+TCCCC 36372:084.755    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011300 if necessary
+TCCCC 36372:084.767    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011400 if necessary
+TCCCC 36372:084.778    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011500 if necessary
+TCCCC 36372:084.790    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011600 if necessary
+TCCCC 36372:084.802    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011700 if necessary
+TCCCC 36372:084.815    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011800 if necessary
+TCCCC 36372:084.827    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011900 if necessary
+TCCCC 36372:084.838    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011A00 if necessary
+TCCCC 36372:084.850    -- Filling invalid ranges in sector buffer (flash cache) for sector @ 0x00011B00 if necessary
+TCCCC 36372:084.899    -- End of determining dirty areas
+TCCCC 36372:084.909    -- Start of preparing flash programming
+TCCCC 36372:084.922    -- Calculating RAM usage
+TCCCC 36372:084.941    -- RAM usage = 5956 Bytes
+TCCCC 36372:084.953    -- Preserving CPU registers
+TCCCC 36372:084.976    -- Preparing target
+TCCCC 36372:084.987    -- Preserving target RAM temporarily used for programming
+TCCCC 36372:126.854    -- Downloading RAMCode
+TCCCC 36372:150.671    -- Preparing RAMCode
+TCCCC 36372:159.419    -- End of preparing flash programming
+TCCCC 36372:165.228    -- CPU speed could not be measured.
+TCCCC 36372:165.258    -- Start of comparing flash
+TCCCC 36372:165.269    -- CRC check was estimated as fastest method
+TCCCC 36372:165.282    -- Comparing range 0x0000 - 0xFFFF (256 Sectors, 64 KB), using multi-block CRC calculation
+TCCCC 36372:225.931    -- CRC does not match for sectors 0-32, 97-255
+TCCCC 36372:225.964    -- Comparing range 0x10000 - 0x11BFF (28 Sectors, 7 KB), using multi-block CRC calculation
+TCCCC 36372:234.886    -- CRC does not match for sectors 0-27
+TCCCC 36372:234.917    -- Comparing range 0x2100 - 0x60FF (64 Sectors, 16 KB), using alternative multi-block CRC calculation
+TCCCC 36372:252.209    -- All CRCs match
+TCCCC 36372:252.242    -- End of comparing flash
+TCCCC 36372:252.253    -- Start of erasing sectors
+TCCCC 36372:252.285    -- Erasing range 0x00011B00 - 0x00011BFF (  1 Sector, 256 Bytes)
+TCCCC 36372:254.932    -- End of erasing sectors
+TCCCC 36372:254.975    -- Start of flash programming
+TCCCC 36372:254.988    -- Programming range 0x00000000 - 0x000020FF ( 33 Sectors, 8 KB)
+TCCCC 36372:324.399    -- Programming range 0x00006100 - 0x0000E0FF (128 Sectors, 32 KB)
+TCCCC 36372:598.867    -- Programming range 0x0000E100 - 0x00011BFF ( 59 Sectors, 14 KB)
+TCCCC 36372:739.166    -- End of flash programming
+TCCCC 36372:739.207    -- 0x0000 - 0x20FF ( 33 Sectors, 8 KiB)
+TCCCC 36372:739.218    -- 0x6100 - 0x11BFF (187 Sectors, 46 KiB)
+TCCCC 36372:739.243    -- Start of restoring
+TCCCC 36372:739.253    -- Restoring RAMCode
+TCCCC 36372:757.122    -- Restoring target memory
+TCCCC 36372:803.606    -- Restore target
+TCCCC 36372:803.641    -- Restoring CPU registers
+TCCCC 36372:803.681    -- End of restoring
+TCCCC 36372:803.751    -- Bank 0 @ 0x00000000: 2 ranges affected (56320 bytes)
+TCCCC 36372:803.797    -- Total: 0.718s (Prepare: 0.080s, Compare: 0.086s, Erase: 0.002s, Program & Verify: 0.498s, Restore: 0.049s)
+TCCCC 36372:803.813    -- Program & Verify speed: 110 KB/s
+TCCCC 36372:805.611 - 726.345ms returns 56320 (0xDC00)
+TCCCC 36372:805.673 JLINK_ResetPullsRESET(ON)
+TCCCC 36372:805.683 - 0.013ms
+TCCCC 36372:805.692 JLINK_ResetNoHalt()
+TCCCC 36372:806.119   InitTarget() start
+TCCCC 36372:806.141    J-Link Script File: Executing InitTarget()
+TCCCC 36372:806.154   InitTarget()
+TCCCC 36372:815.224   InitTarget() end - Took 9.07ms
+TCCCC 36372:816.270   Found SW-DP with ID 0x0BC11477
+TCCCC 36372:823.590   Old FW that does not support reading DPIDR via DAP jobs
+TCCCC 36372:830.420   DPv0 detected
+TCCCC 36372:830.441   CoreSight SoC-400 or earlier
+TCCCC 36372:830.459   AP map detection skipped. Manually configured AP map found.
+TCCCC 36372:830.475   AP[0]: AHB-AP (IDR: Not set)
+TCCCC 36372:838.672   AP[0]: Core found
+TCCCC 36372:838.700   AP[0]: AHB-AP ROM base: 0x41003000
+TCCCC 36372:842.476   CPUID register: 0x410CC601. Implementer code: 0x41 (ARM)
+TCCCC 36372:842.493   Found Cortex-M0 r0p1, Little endian.
+TCCCC 36372:842.912   -- Max. mem block: 0x00002330
+TCCCC 36372:842.930   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+TCCCC 36372:843.415   CPU_ReadMem(4 bytes @ 0xE0002000)
+TCCCC 36372:844.048   FPUnit: 4 code (BP) slots and 0 literal slots
+TCCCC 36372:844.061   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+TCCCC 36372:844.727   CPU_ReadMem(4 bytes @ 0xE0001000)
+TCCCC 36372:845.218   CoreSight components:
+TCCCC 36372:845.236   ROMTbl[0] @ 41003000
+TCCCC 36372:845.259   CPU_ReadMem(64 bytes @ 0x41003000)
+TCCCC 36372:846.213   CPU_ReadMem(32 bytes @ 0xE00FFFE0)
+TCCCC 36372:847.127   [0][0]: E00FF000 CID B105100D PID 000BB4C0 ROM Table
+TCCCC 36372:847.164   ROMTbl[1] @ E00FF000
+TCCCC 36372:847.175   CPU_ReadMem(64 bytes @ 0xE00FF000)
+TCCCC 36372:848.182   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+TCCCC 36372:849.021   [1][0]: E000E000 CID B105E00D PID 000BB008 SCS
+TCCCC 36372:849.040   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+TCCCC 36372:849.812   [1][1]: E0001000 CID B105E00D PID 000BB00A DWT
+TCCCC 36372:849.829   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+TCCCC 36372:850.532   [1][2]: E0002000 CID B105E00D PID 000BB00B FPB
+TCCCC 36372:850.548   CPU_ReadMem(32 bytes @ 0x41006FE0)
+TCCCC 36372:851.334   [0][1]: 41006000 CID B105900D PID 001BB932 MTB-M0+
+TCCCC 36372:851.356   JLINK_Reset()
+TCCCC 36372:851.368     CPU_ReadMem(4 bytes @ 0x20000000)
+TCCCC 36372:851.991     CPU_WriteMem(4 bytes @ 0x20000000)
+TCCCC 36372:852.501     ResetTarget() start
+TCCCC 36372:852.517      J-Link Script File: Executing ResetTarget()
+TCCCC 36372:853.123     CPU_ReadMem(4 bytes @ 0xE000EDFC)
+TCCCC 36372:853.650     CPU_WriteMem(4 bytes @ 0xE000EDFC)
+TCCCC 36372:854.237     CPU_WriteMem(4 bytes @ 0xE000ED0C)
+TCCCC 36372:855.988     CPU_ReadMem(4 bytes @ 0xE000EDF0)
+TCCCC 36372:856.573     CPU_ReadMem(4 bytes @ 0x41002100)
+TCCCC 36372:857.116     CPU_WriteMem(4 bytes @ 0xE000EDFC)
+TCCCC 36372:857.657     ResetTarget() end - Took 5.10ms
+TCCCC 36372:860.207     CPU_WriteMem(4 bytes @ 0xE0002000)
+TCCCC 36372:860.786     CPU_ReadMem(4 bytes @ 0xE000EDFC)
+TCCCC 36372:861.317     CPU_ReadMem(4 bytes @ 0xE0001000)
+TCCCC 36372:862.016     CPU_WriteMem(4 bytes @ 0xE0001000)
+TCCCC 36372:862.700   - 11.361ms
+TCCCC 36372:862.725   JLINK_Go()
+TCCCC 36372:862.737     CPU_ReadMem(4 bytes @ 0xE0001000)
+TCCCC 36372:863.323     CPU_WriteMem(4 bytes @ 0xE0001000)
+TCCCC 36372:864.056     CPU_WriteMem(4 bytes @ 0xE0001004)
+TCCCC 36372:865.239   - 2.525ms
+TCCCC 36372:865.255 - 59.567ms
+TCCCC 36372:876.077 JLINK_Close()
+TCCCC 36372:902.866 - 26.820ms
+TCCCC 36372:902.902   
+TCCCC 36372:902.909   Closed

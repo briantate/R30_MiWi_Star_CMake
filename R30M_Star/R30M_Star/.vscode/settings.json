@@ -1,0 +1,9 @@
+{
+    "cmake.configureOnOpen": false,
+    "cmake.sourceDirectory": "${workspaceFolder}/src",
+    "files.associations": {
+        "delay.h": "c",
+        "demo_output.h": "c",
+        "parts.h": "c"
+    }
+}

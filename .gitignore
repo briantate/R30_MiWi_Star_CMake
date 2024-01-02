@@ -50,3 +50,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# ASF stuff
+
+R30M_Star/R30M_Star/build
+R30M_Star/R30M_Star/Debug
