@@ -1,8 +1,10 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-set(MCPU_FLAGS "-mthumb -mcpu=cortex-m4")
-set(VFP_FLAGS "-mfloat-abi=hard -mfpu=fpv4-sp-d16")
+message(STATUS "tatertronics build")
+
+set(MCPU_FLAGS "-mthumb -mcpu=cortex-m0plus")
+set(VFP_FLAGS "")
 
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR arm)
@@ -54,13 +56,14 @@ set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
 
 # Compiler and linker flags
-set(CMAKE_COMMON_FLAGS "-g3 -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-builtin -fno-common -Wall -Wshadow -Wdouble-promotion -Werror -Wno-unused-parameter")
+# set(CMAKE_COMMON_FLAGS "-g3 -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-builtin -fno-common -Wall -Wshadow -Wdouble-promotion -Werror -Wno-unused-parameter")
+set(CMAKE_COMMON_FLAGS "")
 set(CMAKE_C_FLAGS 	"${MCPU_FLAGS} ${VFP_FLAGS} ${CMAKE_COMMON_FLAGS}")
 set(CMAKE_CXX_FLAGS "${MCPU_FLAGS} ${VFP_FLAGS} ${CMAKE_COMMON_FLAGS}")
 set(CMAKE_ASM_FLAGS "${MCPU_FLAGS} ${VFP_FLAGS} ${CMAKE_COMMON_FLAGS}")
 set(CMAKE_EXE_LINKER_FLAGS "${LD_FLAGS} --specs=nano.specs -Wl,--gc-sections,-print-memory-usage")
 
-set(CMAKE_C_FLAGS_DEBUG "-O0")
+set(CMAKE_C_FLAGS_DEBUG "-O1")
 set(CMAKE_CXX_ASM_FLAGS_DEBUG "-O0")
 set(CMAKE_ASM_FLAGS_DEBUG "")
 set(CMAKE_EXE_LINKER_FLAGS_DEBUG "")

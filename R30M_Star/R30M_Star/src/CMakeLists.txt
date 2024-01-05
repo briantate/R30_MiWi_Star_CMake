@@ -1,19 +1,7 @@
 cmake_minimum_required(VERSION 3.19)
 
 set(PROJECT_NAME R30M_Star_Proj)
-set(PROJECT_BINARY_DIR "../build")
-
-set(microcontroller ATSAMR30E18A)       # Target microcontroller - needed for xc32
-
-# specify cross compilers and tools
-set(CMAKE_C_COMPILER arm-none-eabi-gcc)
-set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
-set(CMAKE_ASM_COMPILER arm-none-eabi-gcc)
-set(CMAKE_AR arm-none-eabi-ar)
-set(CMAKE_OBJCOPY arm-none-eabi-objcopy)
-set(CMAKE_OBJDUMP arm-none-eabi-objdump)
-set(SIZE arm-none-eabi-size)
-set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+set(PROJECT_BINARY_DIR "build")
 
 set(MCPU cortex-m0plus)
 
@@ -58,8 +46,6 @@ add_compile_definitions(
   PROTOCOL_STAR
 )
 
-set(LINKER_SCRIPT ../src/ASF/thirdparty/wireless/miwi/services/pds/src/wl/linkerscripts/samr30/gcc/samr30e18a_flash.ld)
-
 add_compile_options(-mcpu=${MCPU} -mthumb)
 # optimizations
 add_compile_options(-fdata-sections -ffunction-sections -mlong-calls)
@@ -72,7 +58,7 @@ add_compile_options(-pipe -fno-strict-aliasing -Wall -Wstrict-prototypes -Wmissi
 # List of .c files
 add_executable( ${PROJECT_NAME}.elf
                 ${SOURCES}
-                ${LINKER_SCRIPT}
+                # ${LINKER_SCRIPT}
 )
 
 add_subdirectory(ASF/common)
@@ -80,10 +66,9 @@ add_subdirectory(ASF/common2/services/delay/sam0)
 add_subdirectory(ASF/sam0)
 add_subdirectory(ASF/thirdparty)
 
-
 # Include directories - need at least DFP and CMSIS directories
 target_include_directories( ${PROJECT_NAME}.elf 
-                            PRIVATE
+                            PUBLIC
                               . 
                               config
                               ASF
@@ -138,14 +123,29 @@ target_include_directories( ${PROJECT_NAME}.elf
                               ASF/thirdparty/CMSIS/Lib/GCC
 )
 
-# General
-add_link_options(--specs==nano.specs,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
+set(LINKER_SCRIPT ../src/ASF/thirdparty/wireless/miwi/services/pds/src/wl/linkerscripts/samr30/gcc/samr30e18a_flash.ld)
 
-# Optimization
-add_link_options(-Wl,-gc-sections)
-# Miscellaneous
-add_link_options(--entry=Reset_Handler -Wl,--cref -mthumb -T../src/ASF/thirdparty/wireless/miwi/services/pds/src/wl/linkerscripts/samr30/gcc/samr30e18a_flash.ld)
-# add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
+target_link_options( ${PROJECT_NAME}.elf
+                      PUBLIC "-mthumb"
+                      PUBLIC "-Wl,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map"
+                      # General
+                      # PUBLIC "--specs==nano.specs -Wl"
+                      # Optimization
+                      PUBLIC "-Wl,--gc-sections"
+                      PUBLIC "-mcpu=cortex-m0plus"
+                      # Miscellaneous
+                      PUBLIC "-Wl,--entry=Reset_Handler"
+                      PUBLIC "-Wl,--cref"
+                      PUBLIC "-mthumb"
+                      PUBLIC "-T${LINKER_SCRIPT}"
+)
+
+
+# # General
+# add_link_options(--specs==nano.specs,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
+# # Optimization
+# add_link_options(-Wl,-gc-sections)
+# # Miscellaneous
 # add_link_options(-mcpu=${MCPU} -mthumb -mthumb-interwork)
 # add_link_options(-T ${LINKER_SCRIPT})
 
@@ -155,9 +155,8 @@ target_link_directories(${PROJECT_NAME}.elf
                          ASF/thirdparty/wireless/services/common_hw_timer/sam0/lib
 )
 
-
 target_link_libraries( ${PROJECT_NAME}.elf
-                        PRIVATE
+                        PUBLIC
                           sam0_lib_hw_timer
                           arm_cortexM0l_math
                           m
@@ -171,3 +170,9 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
         COMMAND ${CMAKE_OBJCOPY} -Obinary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
         COMMENT "Building ${HEX_FILE}
 Building ${BIN_FILE}")
+
+# Debug statements
+include(CMakePrintHelpers)
+cmake_print_variables(LINKER_SCRIPT)
+#cmake_print_properties( TARGETS HelloWorld.elf PROPERTIES COMPILE_OPTIONS INCLUDE_DIRECTORIES COMPILE_DEFINITIONS SOURCES LINK_OPTIONS)
+#cmake_print_variables( home_directory microchip_dfp_path cmsis_include_path)
