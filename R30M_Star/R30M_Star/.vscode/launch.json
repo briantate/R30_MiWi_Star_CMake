@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/build/R30M_Star_Proj.elf",
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/arm-none-eabi-gdb",
+            "miDebuggerServerAddress": "localhost:3333",
+            "debugServerPath": "openocd",
+            "debugServerArgs": "-f interface/cmsis-dap.cfg -c \"transport select swd\" -c \"adapter speed 4000\" -c \"bindto 0.0.0.0\" -f target/at91samdXX.cfg",
+            "serverStarted": "Listening on port .* for gdb connections",
+            "filterStderr": true,
+            "stopAtConnect": true,
+            "hardwareBreakpoints": {
+                "require": true,
+                "limit": 6
+            },
+            "preLaunchTask": "Flash",
+            "svdPath": "${workspaceFolder}/.vscode/ATSAMR30E18A.svd"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "device.host",
+            "type": "promptString",
+            "default": "host.docker.internal:3333",
+            "description": "The local hostname with port for GDB to connect to"
+        }
+    ]
+}

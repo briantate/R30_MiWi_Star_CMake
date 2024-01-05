@@ -78,7 +78,7 @@ MIWI_TICK PUSH_BUTTON_press_time;
 
 void DemoOutput_Greeting(void)
 {    
-        printf("\r\nStarting Node 1 of Simple Demo for MiWi(TM) STAR Stack ...");  
+        printf("\r\nStarting Node 1 of CMAKE Simple Demo for MiWi(TM) STAR Stack ...");  
         printf("\r\n     RF Transceiver: AT86RF212B");
         printf("\r\n   Demo Instruction:");
         printf("\r\n                     Power on the board until LED 1 lights up");
