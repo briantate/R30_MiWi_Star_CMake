@@ -53,6 +53,8 @@ add_compile_options(-fdata-sections -ffunction-sections -mlong-calls)
 add_compile_options(-Wall)
 # miscellaneous
 add_compile_options(-pipe -fno-strict-aliasing -Wall -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -std=gnu99 -ffunction-sections -fdata-sections -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int -Wmain -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef -Wshadow -Wbad-function-cast -Wwrite-strings -Wsign-compare -Waggregate-return  -Wmissing-declarations -Wformat -Wmissing-format-attribute -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wcast-align --param max-inline-insns-single=500)
+#debug symbol creation
+add_compile_options(-g)
 
 
 # List of .c files
@@ -172,7 +174,7 @@ add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
 Building ${BIN_FILE}")
 
 # Debug statements
-include(CMakePrintHelpers)
-cmake_print_variables(LINKER_SCRIPT)
+# include(CMakePrintHelpers)
+# cmake_print_variables(LINKER_SCRIPT)
 #cmake_print_properties( TARGETS HelloWorld.elf PROPERTIES COMPILE_OPTIONS INCLUDE_DIRECTORIES COMPILE_DEFINITIONS SOURCES LINK_OPTIONS)
 #cmake_print_variables( home_directory microchip_dfp_path cmsis_include_path)
