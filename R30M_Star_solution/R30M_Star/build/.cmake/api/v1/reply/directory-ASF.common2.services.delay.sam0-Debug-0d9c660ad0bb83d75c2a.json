@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "ASF/common2/services/delay/sam0",
+		"source" : "ASF/common2/services/delay/sam0"
+	}
+}

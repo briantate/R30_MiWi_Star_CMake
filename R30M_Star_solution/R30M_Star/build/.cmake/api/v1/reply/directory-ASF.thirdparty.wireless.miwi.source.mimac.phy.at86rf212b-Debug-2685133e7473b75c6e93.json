@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "ASF/thirdparty/wireless/miwi/source/mimac/phy/at86rf212b",
+		"source" : "ASF/thirdparty/wireless/miwi/source/mimac/phy/at86rf212b"
+	}
+}

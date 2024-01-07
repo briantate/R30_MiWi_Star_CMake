@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "ASF/sam0/drivers/system/clock/clock_samr30",
+		"source" : "ASF/sam0/drivers/system/clock/clock_samr30"
+	}
+}

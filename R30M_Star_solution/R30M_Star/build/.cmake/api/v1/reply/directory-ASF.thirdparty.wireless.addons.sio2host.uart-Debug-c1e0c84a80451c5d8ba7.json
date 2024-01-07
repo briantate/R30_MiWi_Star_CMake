@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "ASF/thirdparty/wireless/addons/sio2host/uart",
+		"source" : "ASF/thirdparty/wireless/addons/sio2host/uart"
+	}
+}

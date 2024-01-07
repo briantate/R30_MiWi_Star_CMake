@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "ASF/sam0/utils/cmsis/samr30/source/gcc",
+		"source" : "ASF/sam0/utils/cmsis/samr30/source/gcc"
+	}
+}

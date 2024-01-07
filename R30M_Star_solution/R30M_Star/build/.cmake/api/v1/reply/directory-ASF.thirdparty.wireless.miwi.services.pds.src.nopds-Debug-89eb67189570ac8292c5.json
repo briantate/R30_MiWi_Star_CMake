@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "ASF/thirdparty/wireless/miwi/services/pds/src/nopds",
+		"source" : "ASF/thirdparty/wireless/miwi/services/pds/src/nopds"
+	}
+}

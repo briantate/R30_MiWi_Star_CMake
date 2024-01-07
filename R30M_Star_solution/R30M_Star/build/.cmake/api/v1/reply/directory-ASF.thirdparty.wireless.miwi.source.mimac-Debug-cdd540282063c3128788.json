@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "ASF/thirdparty/wireless/miwi/source/mimac",
+		"source" : "ASF/thirdparty/wireless/miwi/source/mimac"
+	}
+}
