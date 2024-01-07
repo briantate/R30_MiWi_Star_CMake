@@ -1,6 +1,0 @@
-[
-    {
-        "name": "gcc",
-        "toolchainFile": "${workspaceFolder}/cmake/gcc.cmake"
-    }
-]
