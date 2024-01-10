@@ -33,7 +33,7 @@
             "interface": "swd",
             "device": "ATSAMR30E18A",
             "runToEntryPoint": "main",
-            "svdFile": "${workspaceFolder}/.vscode/ATSAMR30E18A.svd",
+            "svdFile": "${workspaceFolder}/utils/ATSAMR30E18A.svd",
             "configFiles": [
                 "interface/cmsis-dap.cfg",
                 "target/at91samdXX.cfg",
@@ -59,7 +59,7 @@
             "servertype": "openocd",
             "interface": "swd",
             "device": "ATSAMR30E18A",
-            "svdFile": "${workspaceFolder}/.vscode/ATSAMR30E18A.svd",
+            "svdFile": "${workspaceFolder}/utils/ATSAMR30E18A.svd",
             "configFiles": [
                 "interface/cmsis-dap.cfg",
                 "target/at91samdXX.cfg",

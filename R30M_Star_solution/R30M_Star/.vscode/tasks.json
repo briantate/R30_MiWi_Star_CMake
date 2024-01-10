@@ -4,7 +4,8 @@
         {
             "label": "Flash",
             "type": "shell",
-            "command": "openocd -f ${workspaceFolder}/.vscode/samr30m_board.cfg -c \"transport select swd\" -c \"program build/R30M_Star_Proj.elf verify\" -c \"reset halt\" -c shutdown",
+            // "command": "openocd -f ${workspaceFolder}/.vscode/samr30m_board.cfg -c \"transport select swd\" -c \"program build/R30M_Star_Proj.elf verify\" -c \"reset halt\" -c shutdown",
+            "command": "openocd -f ${workspaceFolder}/utils/clear_bootprot_and_flash.cfg",
             "windows": {
                 "options": {
                   "shell": {

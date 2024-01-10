@@ -10,6 +10,7 @@ This is a port of a Microchip Studio ASF example project for the SAMR30M Xplaine
 ## VSCode
 * open this project from the R30M_Star directory so vscode can access the build/flash/debug tasks
     * ToDo: is there a way to make the top level directory find this as well?
+    * ToDo: how to pull the project name into something that can be read by the openocd config files as well as the cmake build tasks
 
 ### Extension setup
 * Install "C/C++ Extension Pack" Extension from Microsoft
