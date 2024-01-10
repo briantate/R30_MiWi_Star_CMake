@@ -72,6 +72,8 @@ This is a port of a Microchip Studio ASF example project for the SAMR30M Xplaine
 * I have created a "task.json" file in the ".vscode" directory. This gives you some Terminal tasks you can run.
 * tasks.json
     * to run the "Flash" task, go to Terminal->Run Task... then select "Flash"
+        * NOTE: IF THE BOOTLOADER PROTECTION FUSE IS ON, YOU MAY GET THE ERROR "Error: SAMD: NVM lock error"
+            * This seems to go away on the second programming attempt. It may be an issue with the openocd "bootloader" command
     * ToDo: how to write the user row on SAML21 with openocd to clear the BOOTPROT flags?
 
 # Debugging the application:
