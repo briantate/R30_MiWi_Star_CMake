@@ -53,6 +53,6 @@ dkms.conf
 
 # ASF stuff
 
-R30M_Star_solution/R30M_Star/build
-R30M_Star_solution/R30M_Star/Debug
-R30M_Star_solution/build
+**/build
+**/Debug
+**/.DS_Store
