@@ -12,11 +12,6 @@ project(    ${PROJECT_NAME}
             LANGUAGES C
 )
 
-# Modify the paths below for DFP and CMSIS include
-# Pack updates appear in home_directory and original files appear in MPLAB X install directory
-set(microchip_dfp_path "ASF/sam0/utils/cmsis/samr30" )
-set(cmsis_include_path "ASF/thirdparty/CMSIS/Include" )
-
 
 # does the startup file need to be here?
 set(SOURCES

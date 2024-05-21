@@ -458,7 +458,9 @@ typedef struct __defaultParametersRomOrRam
 #endif
 #else
    CONNECTION_ENTRY  *ConnectionTable;
+   CommDeviceTable_t *commDevTable;
    ACTIVE_SCAN_RESULT  *ActiveScanResults;
+   uint8_t maxNumOfDevicesInNetwork;
    uint8_t *AdditionalNodeID;
    uint8_t networkFreezerRestore;
 #endif
@@ -1291,7 +1293,7 @@ bool MiApp_RoleUpgradeNotification_Subscribe(roleUpgrade_callback_t callback);
 
 /************************************************************************************
 * Function:
-*      bool MiApp_Commissioning_AddNewDevice(uint64_t joinerAddress, bool triggerBloomUpdate)
+*      bool MiApp_Commissioning_AddNewDevice(uint64_t joinerAddress)
 *
 * Summary:
 *      This function adds the given address into the commissioning device address list
@@ -1299,12 +1301,11 @@ bool MiApp_RoleUpgradeNotification_Subscribe(roleUpgrade_callback_t callback);
 *
 * Parameters:
 *      uint64_t joinerAddress - the ieee address to be added.
-*      bool triggerBloomUpdate - if set to true then bloom update is sent immediately
 *
 * Returns:
 *      true if found, false otherwise.
 *****************************************************************************************/
-bool MiApp_Commissioning_AddNewDevice(uint64_t joinerAddress, bool triggerBloomUpdate);
+bool MiApp_Commissioning_AddNewDevice(uint64_t joinerAddress);
 
 #if defined(PROTOCOL_MESH)
 /************************************************************************************
